@@ -1,0 +1,13 @@
+﻿@model CustomerSample.Models.CustomerModel
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm("Edit", "Customer", FormMethod.Post))
+{
+    @Html.TextBoxFor(m => m.FullName);
+    @Html.ValidationMessageFor(m => m.FullName, "", new { @class = "text-danger" })
+    <input type="submit" value="submit" />
+}

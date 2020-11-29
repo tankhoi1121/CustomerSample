@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="AsusTek" Class="AsusDBDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=DESKTOP-OOBMMSN\SQLEXPRESS;Initial Catalog=AsusTek;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="AsusTekConnectionString" Provider="System.Data.SqlClient" />
+  <Function Name="dbo.CheckExistedField" Method="CheckExistedField">
+    <Parameter Name="CustomerID" Parameter="customerID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Value" Parameter="value" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="Mode" Parameter="mode" Type="System.Int32" DbType="Int" />
+    <ElementType Name="CheckExistedFieldResult">
+      <Column Name="CheckExist" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetIdByFullName" Method="GetIdByFullName">
+    <Parameter Name="FullName" Parameter="fullName" Type="System.String" DbType="NVarChar(MAX)" />
+    <ElementType Name="GetIdByFullNameResult">
+      <Column Name="CustomerID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+</Database>

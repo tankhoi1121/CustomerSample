@@ -1,0 +1,10 @@
+﻿
+@model CustomerSample.Models.CustomerModel
+
+<h1>@ViewData["X"]</h1>
+@using (Html.BeginForm("Add","Customer", FormMethod.Post))
+{
+    @Html.TextBoxFor(m => m.FullName);
+    @Html.ValidationMessageFor(m => m.FullName, "", new { @class = "text-danger" })
+    <input type="submit" value="submit"/>
+}
